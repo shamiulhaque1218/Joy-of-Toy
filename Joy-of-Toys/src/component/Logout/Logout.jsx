@@ -4,7 +4,7 @@ import React from 'react';
 const Logout = () => {
     return (
         <div>
-            This is Logout page.
+            this is logout page.
         </div>
     );
 };
