@@ -99,7 +99,7 @@ const SignUp = () => {
         </div>
 
          <div className="mb-4">
-        <label htmlFor="photoUrl" className="block text-gray-700 font-bold mb-2">Photo URL</label>
+        <label htmlFor="photoUrl" className="block text-gray-600 font-semibold mb-2 text-sm">Photo URL</label>
         <input type="text" id="photoUrl" value={photoURL} onChange={handlePhotoUrl} className="border-gray-400 border-2 p-2 rounded-md w-full focus:outline-none focus:border-blue-500" required/>
       </div> 
         <div className="">
