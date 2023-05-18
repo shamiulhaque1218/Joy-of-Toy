@@ -2,12 +2,13 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
+
 const Navbar = () => {
     return (
         <div >
 
-<div className="navbar bg-base-100">
-  <div className="navbar-start">
+<div className="navbar bg-base-100 lg:p-5 py-2">
+  <div className="navbar-center">
     <div className="dropdown">
       <label tabIndex={0} className="btn btn-ghost lg:hidden">
         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
@@ -23,10 +24,10 @@ const Navbar = () => {
       </ul>
     </div>
     <img className='w-24 h-24 rounded-full' src="joytoy.png" alt="" />
-    <a className="btn btn-ghost normal-case text-3xl">  Joy Of Toys</a>
+    <a className="btn btn-ghost normal-case text-4xl gFont font-light">  Joy Of Toys</a>
   </div>
-  <div className="navbar-center hidden lg:flex">
-    <ul className="menu menu-horizontal px-1">
+  <div className="navbar-center hidden  lg:flex">
+    <ul className="menu menu-horizontal gap-6 px-40 text-md font-medium">
       
    
        
