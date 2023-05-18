@@ -1,9 +1,20 @@
 // eslint-disable-next-line no-unused-vars
-import React from 'react';
-import { NavLink } from 'react-router-dom';
+import React, { useContext } from 'react';
+import {  NavLink } from 'react-router-dom';
+import { AuthContext } from '../provider/AuthProvider';
 
 
 const Navbar = () => {
+
+  const {user,logOutUser} = useContext(AuthContext);
+
+  const handelLogOut = () => {
+    logOutUser().then((res) => {
+     console.log(res).catch((err) => {
+         console.log(err);
+     })
+   })
+     }
     return (
         <div >
 
@@ -36,6 +47,13 @@ const Navbar = () => {
         <li> <NavLink to="/logout" className={({ isActive }) => (isActive ? 'text-blue-500'  : 'text-black')}>My Toys</NavLink> </li>
         <li> <NavLink to="/login" className={({ isActive }) => (isActive ? 'text-blue-500'  : 'text-black')}>Add A Toy</NavLink> </li>
         <li> <NavLink to="/blogs" className={({ isActive }) => (isActive ? 'text-blue-500'  : 'text-black')}>Blogs</NavLink> </li>
+        <li> <NavLink to="/signup" className={({ isActive }) => (isActive ? 'text-blue-500'  : 'text-black')}>Login/Signup</NavLink> </li>
+
+        {
+              user && <button className='pl-2 lg:pl-5' onClick={handelLogOut}> Log out</button> 
+            }
+       
+       
 
 
     </ul>
