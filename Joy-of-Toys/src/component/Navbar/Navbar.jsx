@@ -7,7 +7,7 @@ const Navbar = () => {
     return (
         <div >
 
-<div className="navbar bg-base-100 lg:p-5 py-2">
+<div className="navbar bg-base-100 lg:p-5 py-2 bg-gradient-to-r from-blue-100 to-blue-200">
   <div className="navbar-center">
     <div className="dropdown">
       <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -27,7 +27,7 @@ const Navbar = () => {
     <a className="btn btn-ghost normal-case text-4xl gFont font-light">  Joy Of Toys</a>
   </div>
   <div className="navbar-center hidden  lg:flex">
-    <ul className="menu menu-horizontal gap-6 px-40 text-md font-medium">
+    <ul className="menu menu-horizontal gap-6 px-40 text-base font-medium">
       
    
        

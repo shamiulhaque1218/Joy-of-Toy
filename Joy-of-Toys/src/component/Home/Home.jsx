@@ -5,18 +5,6 @@ const Home = () => {
     return (
         <div>
             This is home page or webpage
-            This is home page or webpage
-            This is home page or webpage
-            This is home page or webpage
-            This is home page or webpage
-            This is home page or webpage
-            This is home page or webpage
-            This is home page or webpage
-            This is home page or webpage
-            This is home page or webpage
-            This is home page or webpage
-            This is home page or webpage
-            This is home page or webpage
             
         </div>
         
