@@ -6,7 +6,7 @@ import { AuthContext } from "../provider/AuthProvider";
 
 const SignUp = () => {
 
-  const {signUpUser} = useContext(AuthContext);
+  const {signUpUser,logOutUser} = useContext(AuthContext);
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -48,6 +48,7 @@ const SignUp = () => {
         .then((result) => {
           console.log(result.user);
           setSuccess("welcome ! Create User Successfully");
+          logOutUser();
         })
         .catch((err) => {
           setError(err.message);

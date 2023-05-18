@@ -27,10 +27,15 @@ const Navbar = () => {
       <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
 
         <li> <NavLink to="/" className={({ isActive }) => (isActive ? 'text-blue-500'  : 'text-black')}>Home</NavLink> </li>
-        <li> <NavLink to="login" className={({ isActive }) => (isActive ? 'text-blue-500'  : 'text-black')}>All Toys</NavLink> </li>
-        <li> <NavLink to="logout" className={({ isActive }) => (isActive ? 'text-blue-500'  : 'text-black')}>My Toys</NavLink> </li>
-        <li> <NavLink to="login" className={({ isActive }) => (isActive ? 'text-blue-500'  : 'text-black')}>Add A Toy</NavLink> </li>
-        <li> <NavLink to="blogs" className={({ isActive }) => (isActive ? 'text-blue-500'  : 'text-black')}>Blogs</NavLink> </li>
+        <li> <NavLink to="/alltoys" className={({ isActive }) => (isActive ? 'text-blue-500'  : 'text-black')}>All Toys</NavLink> </li>
+        <li> <NavLink to="/toys" className={({ isActive }) => (isActive ? 'text-blue-500'  : 'text-black')}>My Toys</NavLink> </li>
+        <li> <NavLink to="/addtoy" className={({ isActive }) => (isActive ? 'text-blue-500'  : 'text-black')}>Add A Toy</NavLink> </li>
+        <li> <NavLink to="/blogs" className={({ isActive }) => (isActive ? 'text-blue-500'  : 'text-black')}>Blogs</NavLink> </li>
+        <li> <NavLink to="/signup" className={({ isActive }) => (isActive ? 'text-blue-500'  : 'text-black')}>Login/Signup</NavLink> </li>
+        {
+              user && <button className='pl-2 lg:pl-5' onClick={handelLogOut}> Log out</button> 
+        }
+
         
       </ul>
     </div>
@@ -43,15 +48,15 @@ const Navbar = () => {
    
        
         <li> <NavLink to="/" className={({ isActive }) => (isActive ? 'text-blue-500'  : 'text-black')}>Home</NavLink> </li>
-        <li> <NavLink to="/login" className={({ isActive }) => (isActive ? 'text-blue-500'  : 'text-black')}>All Toys</NavLink> </li>
-        <li> <NavLink to="/logout" className={({ isActive }) => (isActive ? 'text-blue-500'  : 'text-black')}>My Toys</NavLink> </li>
-        <li> <NavLink to="/login" className={({ isActive }) => (isActive ? 'text-blue-500'  : 'text-black')}>Add A Toy</NavLink> </li>
+        <li> <NavLink to="/alltoys" className={({ isActive }) => (isActive ? 'text-blue-500'  : 'text-black')}>All Toys</NavLink> </li>
+        <li> <NavLink to="/toys" className={({ isActive }) => (isActive ? 'text-blue-500'  : 'text-black')}>My Toys</NavLink> </li>
+        <li> <NavLink to="/addtoy" className={({ isActive }) => (isActive ? 'text-blue-500'  : 'text-black')}>Add A Toy</NavLink> </li>
         <li> <NavLink to="/blogs" className={({ isActive }) => (isActive ? 'text-blue-500'  : 'text-black')}>Blogs</NavLink> </li>
         <li> <NavLink to="/signup" className={({ isActive }) => (isActive ? 'text-blue-500'  : 'text-black')}>Login/Signup</NavLink> </li>
 
         {
               user && <button className='pl-2 lg:pl-5' onClick={handelLogOut}> Log out</button> 
-            }
+        }
        
        
 

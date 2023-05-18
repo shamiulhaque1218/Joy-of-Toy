@@ -7,6 +7,7 @@ import SignUp from "../SignUp/SignUp";
 import About from "../About/About";
 import Contact from "../About/Contact";
 import Blogs from "../Blogs/Blogs";
+import PrivateRoute from "../PrivateRouter/Privateroute";
 
 const router = createBrowserRouter([
     {
@@ -36,7 +37,11 @@ const router = createBrowserRouter([
         },
         {
           path: "/blogs",
-          element: <Blogs />,
+          element: <PrivateRoute> <Blogs> </Blogs> </PrivateRoute>,
+        },
+        {
+          path: "/addtoy",
+          element: <Contact />,
         },
         
       ],

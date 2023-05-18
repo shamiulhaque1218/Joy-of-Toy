@@ -87,7 +87,7 @@ const Login = () => {
 
         <div className="text-center mt-10">
           Already on ChefHouse?
-          <Link to="/registration" className="font-semibold text-blue-700 ml-2">
+          <Link to="/signup" className="font-semibold text-blue-700 ml-2">
             Join now
           </Link>{" "}
           <br />
