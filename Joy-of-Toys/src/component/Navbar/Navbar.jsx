@@ -132,7 +132,6 @@ const Navbar = () => {
           </div>
           <img className="w-24 h-24 rounded-full" src="joytoy.png" alt="" />
           <a className="btn btn-ghost normal-case text-4xl gFont font-light">
-            {" "}
             Joy Of Toys
           </a>
         </div>

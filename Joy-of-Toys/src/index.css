@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 @import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap');
 
 @layer utilities {
     .error{
@@ -11,6 +12,12 @@
     }
     .gFont{
       font-family: 'Cedarville Cursive', cursive;
+    }
+    .gFont2{
+      font-family: 'Lobster Two', cursive;
+    }
+    .bannerImg{
+      height: 550px;
     }
     
   }

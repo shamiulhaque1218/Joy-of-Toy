@@ -8,6 +8,7 @@ const Footer = () => {
 
 <footer className="footer footer-center p-10 bg-blue-100 rounded text-stone-800 text-base">
   <div className="grid grid-flow-col gap-4">
+  <img className="w-24 h-24 rounded-full" src="joytoy.png" alt="" />
     <Link to="/about">About us</Link> 
     <Link to="/contact">Contact</Link> 
     <Link to="/toys">Toys</Link> 
