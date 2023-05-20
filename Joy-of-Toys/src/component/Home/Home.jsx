@@ -5,6 +5,7 @@ import Product from "./Product";
 import Galary from "./Galary";
 import { useLoaderData } from "react-router-dom";
 import ProductDes from "./ProductDes";
+import Customercare from "./Customercare";
 
 const Home = () => {
   const newdata = useLoaderData(); 
@@ -30,8 +31,10 @@ const Home = () => {
       }
       </div>
 
+      <Customercare> </Customercare>
+
       <ProductDes> </ProductDes>
-      
+     
       <div>
       {
         toyData.map(result => 
