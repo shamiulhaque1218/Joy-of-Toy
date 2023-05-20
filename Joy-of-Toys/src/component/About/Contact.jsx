@@ -12,7 +12,11 @@ const Contact = () => {
                 <div className="max-w-2xl mx-auto">
                   <p className="text-gray-700 text-lg leading-relaxed">
                     We would love to hear from you! If you have any questions, comments,
-                    or feedback, please do not hesitate to reach out to us.
+                    or feedback, please do not hesitate to reach out to us. <br/>
+                    <span className='font-bold text-xl p-1'>Emergency Contact</span> <br/>
+                    <span className='p-1'>Email: joytoy@gmail.com</span> <br/>
+                    <span className='p-1'>Phone: 01558585858</span> <br/>
+                    Or
                   </p>
                   <form className="mt-6">
                     <div className="mb-6">

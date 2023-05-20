@@ -4,6 +4,7 @@ import Banner from "./Banner";
 import Product from "./Product";
 import Galary from "./Galary";
 import { useLoaderData } from "react-router-dom";
+import ProductDes from "./ProductDes";
 
 const Home = () => {
   const newdata = useLoaderData(); 
@@ -29,7 +30,8 @@ const Home = () => {
       }
       </div>
 
-
+      <ProductDes> </ProductDes>
+      
       <div>
       {
         toyData.map(result => 
@@ -37,6 +39,7 @@ const Home = () => {
            ></Galary> )
       }
       </div>
+      
     </div>
   );
 };

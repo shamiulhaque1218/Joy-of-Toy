@@ -47,7 +47,7 @@ const router = createBrowserRouter([
         },
         {
           path: "/details/:id",
-          element:  <ViewDetailes />,
+          element: <PrivateRoute>  <ViewDetailes />  </PrivateRoute>,
           loader: ({params}) => fetch(`https://joy-of-toys-server.vercel.app/viewtoy/${params.id}`),
   
         },
