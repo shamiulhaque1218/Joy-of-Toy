@@ -5,9 +5,20 @@ import Rating from "react-rating";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import {FaRegStar ,FaStar } from 'react-icons/fa';
+import { Link } from "react-router-dom";
 
 const Product = (props) => {
  // console.log(props.result.data[0].image_url);
+ const id_1 = (props.result.data[1]._id);
+ const id_2 = (props.result.data[2]._id);
+ const id_3 = (props.result.data[3]._id);
+ const id_4 = (props.result.data[4]._id);
+ const id_5 = (props.result.data[5]._id);
+ const id_6 = (props.result.data[6]._id);
+ const id_7 = (props.result.data[7]._id);
+ const id_8 = (props.result.data[8]._id);
+ const id_0 = (props.result.data[0]._id);
+ 
   return (
     <div className="py-2 text-center">
       <p className="text-3xl py-12 gFont2"> Product Categories </p>
@@ -49,9 +60,9 @@ const Product = (props) => {
                   fullSymbol={<FaStar> </FaStar>}
                 /> </p>
                 <div className="card-actions justify-center">
-                  <button className="btn btn-primary px-32 ">
+                  <Link to={`details/${id_0}`}> <button className="btn btn-primary px-32 ">
                     View Details
-                  </button>
+                  </button> </Link>
                 </div>
               </div>
             </div>
@@ -84,9 +95,9 @@ const Product = (props) => {
                   fullSymbol={<FaStar> </FaStar>}
                 /> </p>
                 <div className="card-actions justify-end">
-                  <button className="btn btn-primary px-32 ">
+                <Link to={`details/${id_1}`}> <button className="btn btn-primary px-32 ">
                     View Details
-                  </button>
+                  </button> </Link>
                 </div>
               </div>
             </div>
@@ -119,9 +130,9 @@ const Product = (props) => {
                   fullSymbol={<FaStar> </FaStar>}
                 /> </p>
                 <div className="card-actions justify-end">
-                  <button className="btn btn-primary px-32 ">
+                <Link to={`details/${id_2}`}> <button className="btn btn-primary px-32 ">
                     View Details
-                  </button>
+                  </button> </Link>
                 </div>
               </div>
             </div>
@@ -157,9 +168,9 @@ const Product = (props) => {
                   fullSymbol={<FaStar> </FaStar>}
                 /> </p>
                 <div className="card-actions justify-end">
-                  <button className="btn btn-primary px-32 ">
+                <Link to={`details/${id_3}`}> <button className="btn btn-primary px-32 ">
                     View Details
-                  </button>
+                  </button> </Link>
                 </div>
               </div>
             </div>
@@ -192,9 +203,9 @@ const Product = (props) => {
                   fullSymbol={<FaStar> </FaStar>}
                 /> </p>
                 <div className="card-actions justify-end">
-                  <button className="btn btn-primary px-32 ">
+                <Link to={`details/${id_4}`}> <button className="btn btn-primary px-32 ">
                     View Details
-                  </button>
+                  </button> </Link>
                 </div>
               </div>
             </div>
@@ -227,9 +238,9 @@ const Product = (props) => {
                   fullSymbol={<FaStar> </FaStar>}
                 /> </p>
                 <div className="card-actions justify-end">
-                  <button className="btn btn-primary px-32 ">
+                <Link to={`details/${id_5}`}> <button className="btn btn-primary px-32 ">
                     View Details
-                  </button>
+                  </button> </Link>
                 </div>
               </div>
             </div>
@@ -265,9 +276,9 @@ const Product = (props) => {
                   fullSymbol={<FaStar> </FaStar>}
                 /> </p>
                 <div className="card-actions justify-end">
-                  <button className="btn btn-primary px-32 ">
+                <Link to={`details/${id_6}`}> <button className="btn btn-primary px-32 ">
                     View Details
-                  </button>
+                  </button> </Link>
                 </div>
               </div>
             </div>
@@ -300,9 +311,9 @@ const Product = (props) => {
                   fullSymbol={<FaStar> </FaStar>}
                 /> </p>
                 <div className="card-actions justify-end">
-                  <button className="btn btn-primary px-32 ">
+                <Link to={`details/${id_7}`}> <button className="btn btn-primary px-32 ">
                     View Details
-                  </button>
+                  </button> </Link>
                 </div>
               </div>
             </div>
@@ -335,9 +346,9 @@ const Product = (props) => {
                   fullSymbol={<FaStar> </FaStar>}
                 /> </p>
                 <div className="card-actions justify-end">
-                  <button className="btn btn-primary px-32 ">
+                <Link to={`details/${id_8}`}> <button className="btn btn-primary px-32 ">
                     View Details
-                  </button>
+                  </button> </Link>
                 </div>
               </div>
             </div>
