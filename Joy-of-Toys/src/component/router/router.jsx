@@ -9,6 +9,7 @@ import Contact from "../About/Contact";
 import Blogs from "../Blogs/Blogs";
 import PrivateRoute from "../PrivateRouter/Privateroute";
 import ViewDetailes from "../Home/ViewDetailes";
+import AddData from "../AddData/AddData";
 
 const router = createBrowserRouter([
     {
@@ -43,7 +44,7 @@ const router = createBrowserRouter([
         },
         {
           path: "/addtoy",
-          element: <Contact />,
+          element: <AddData />,
         },
         {
           path: "/details/:id",
