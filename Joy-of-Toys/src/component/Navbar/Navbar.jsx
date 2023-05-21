@@ -66,7 +66,7 @@ const Navbar = () => {
                 <li>
                   {" "}
                   <NavLink
-                    to="/toys"
+                    to="/mydata"
                     className={({ isActive }) =>
                       isActive ? "text-blue-500" : "text-black"
                     }
@@ -152,7 +152,7 @@ const Navbar = () => {
               <li>
                 {" "}
                 <NavLink
-                  to="/toys"
+                  to="/mydata"
                   className={({ isActive }) =>
                     isActive ? "text-blue-500" : "text-black"
                   }
