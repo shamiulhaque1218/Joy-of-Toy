@@ -43,7 +43,7 @@ const Login = () => {
   };
 
   return (
-    <div className="mb-20 lg:mt-0 mt-5">
+    <div className="mb-20 lg:mt-0 mt-5" data-aos="zoom-in-down">
       <form
         onSubmit={handleSubmit}
         className="lg:max-w-sm max-w-md mx-auto bg-white p-8 rounded-md shadow-md"

@@ -1,35 +1,33 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
+import { useLoaderData } from 'react-router-dom';
+import AlldataWithtable from './AlldataWithtable';
 
 const Alltoy = () => {
+  const data = useLoaderData()
     return (
-        <div>
+      <div className="overflow-x-auto px-2">
+      <table className="table table-compact w-full">
+        <thead>
+          <tr> 
+            <th className='text-center'>Seller Name</th> 
+            <th className='text-center'>Toy Name</th> 
+            <th className='text-center'>Sub-category</th> 
+            <th className='text-center'>Price</th> 
+            <th className='text-center'>Available Quantity</th> 
+            <th className='text-center'></th>
+          </tr>
+        </thead> 
+        
+          {
+            data.map(data => <AlldataWithtable key={data._id} data={data} >  
 
-<div className="overflow-x-auto">
-  <table className="table w-full">
-    {/* head */}
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>pictureURL</th>
-        <th>Seller Name</th> 
-        <th>Seller Email</th>
-      </tr>
-    </thead>
-    <tbody>
-      {/* row 1 */}
-      <tr>
-        <td>Name: {}</td>
-        {/* <td><img className="h-12" src={pictureURL? pictureURL : "Image"} alt="" /> </td> */}
-        <td>Seller Name: {}</td>
-        <td>Seller Email: {}</td>
-      </tr>
-      
-    </tbody>
-  </table>
-</div>
-            
-        </div>
+            </AlldataWithtable> )
+          }
+        
+        
+      </table>
+      </div>
     );
 };
 

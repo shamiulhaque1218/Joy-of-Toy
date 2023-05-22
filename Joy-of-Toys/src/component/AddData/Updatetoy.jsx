@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import React, { useState } from 'react';
+import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import Swal from 'sweetalert2';
 
@@ -17,23 +17,26 @@ const Updatetoy = () => {
         quantity,
         description,
       } = update;
-    const [name1, setName] = useState('');
-    const [pictureURL1, setPictureURL] = useState('');
-    const [sellerName1, setSellerName] = useState('');
-    const [sellerEmail1, setSellerEmail] = useState('');
-    const [subCategory1, setSubCategory] = useState('');
-    const [price1, setPrice] = useState('');
-    const [rating1, setRating] = useState('');
-    const [quantity1, setQuantity] = useState('');
-    const [description1, setDescription] = useState('');
 
     const handleUpdate = (e) => {
         e.preventDefault(); 
-        const newUpdateToy = {name1,pictureURL1,sellerName1,sellerEmail1,subCategory1,price1,rating1,quantity1,description1}
+         const form = e.target
+         const name= form.name.value
+         const pictureURL = form.pictureURL.value
+         const sellerName = form.sellerName.value
+         const sellerEmail = form.sellerEmail.value
+         const subCategory = form.subCategory.value
+         const price = form.price.value
+         const rating = form.rating.value
+         const quantity = form.quantity.value
+         const description = form.description.value
+   
+
+        const newUpdateToy = {name,pictureURL,sellerName,sellerEmail,subCategory,price,rating,quantity,description}
         console.log(newUpdateToy);
 
-        fetch(`http://localhost:4000/product/${_id}`, {
-        method: 'PUT',
+        fetch(`https://joy-of-toys-server.vercel.app/product/${_id}`, {
+        method: 'PATCH',
         headers: {
             'content-type': 'application/json'
         },
@@ -66,8 +69,9 @@ const Updatetoy = () => {
         <input
           type="text"
           id="name"
+          name="name"
           defaultValue={name}
-          onChange={(e) => setName(e.target.value)}
+          
           className="w-full px-3 py-2 placeholder-gray-400 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
       </div>
@@ -80,7 +84,7 @@ const Updatetoy = () => {
           type="text"
           id="pictureURL"
           defaultValue={pictureURL}
-          onChange={(e) => setPictureURL(e.target.value)}
+          name="pictureURL"
           className="w-full px-3 py-2 placeholder-gray-400 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
       </div>
@@ -93,7 +97,7 @@ const Updatetoy = () => {
           type="text"
           id="sellerName"
           defaultValue={sellerName}
-          onChange={(e) => setSellerName(e.target.value)}
+          name="sellerName"
           className="w-full px-3 py-2 placeholder-gray-400 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
       </div>
@@ -106,7 +110,7 @@ const Updatetoy = () => {
           type="email"
           id="sellerEmail"
           defaultValue={sellerEmail}
-          onChange={(e) => setSellerEmail(e.target.value)}
+          name="sellerEmail"
           className="w-full px-3 py-2 placeholder-gray-400 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
       </div>
@@ -119,7 +123,7 @@ const Updatetoy = () => {
           type="text"
           id="subCategory"
           defaultValue={subCategory}
-          onChange={(e) => setSubCategory(e.target.value)}
+          name="subCategory"
           className="w-full px-3 py-2 placeholder-gray-400 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
       </div>
@@ -132,7 +136,7 @@ const Updatetoy = () => {
           type="text"
           id="price"
           defaultValue={price}
-          onChange={(e) => setPrice(e.target.value)}
+         name="price"
           className="w-full px-3 py-2 placeholder-gray-400 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
       </div>
@@ -145,7 +149,7 @@ const Updatetoy = () => {
           type="text"
           id="rating"
           defaultValue={rating}
-          onChange={(e) => setRating(e.target.value)}
+          name="rating"
           className="w-full px-3 py-2 placeholder-gray-400 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
       </div>
@@ -158,7 +162,7 @@ const Updatetoy = () => {
           type="text"
           id="quantity"
           defaultValue={quantity}
-          onChange={(e) => setQuantity(e.target.value)}
+          name="quantity"
           className="w-full px-3 py-2 placeholder-gray-400 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
       </div>
@@ -170,7 +174,7 @@ const Updatetoy = () => {
         <textarea
           id="description"
           defaultValue={description}
-          onChange={(e) => setDescription(e.target.value)}
+          name="description"
           className="w-full px-3 py-2 placeholder-gray-400 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
           rows="4"
         />

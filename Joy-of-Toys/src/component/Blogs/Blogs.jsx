@@ -27,7 +27,7 @@ const Blogs = () => {
 
     
       return (
-        <div className="bg-gray-100 min-h-screen">
+        <div className="bg-gray-100 min-h-screen" data-aos="zoom-out-right">
           <div className="container mx-auto py-12">
             <h1 className="text-2xl md:text-3xl lg:text-4xl text-center font-bold text-gray-800 mb-6">
               Frequently Asked Questions

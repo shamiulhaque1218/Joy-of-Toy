@@ -7,8 +7,8 @@ const Galary = (props) => {
     //console.log(props.result.data[0])
 
     return (
-        <div className='bg-sky-800 '> 
-            <p className='text-center text-5xl text-white gFont2 pt-40'> Welcome to our stunning gallery <br />  of captivating photographs. </p>
+        <div className='bg-sky-800 ' > 
+            <p  className='text-center text-5xl text-white gFont2 pt-40'> Welcome to our stunning gallery <br />  of captivating photographs. </p>
             <p className='text-center text-white text-2xl py-8'>Our collections are many category of Animal Toys.</p>
         <div className='grid grid-cols-4 px-32 py-10 '>
         <img className='col-span-2 row-span-2 height0 w-full drop-shadow-lg' src={props.result.data[0].image_url} alt="" />

@@ -8,18 +8,35 @@ const Mydata = () => {
     const [toy,setToy] = useState(data)
 
     return (
-        <div>
-             <p className='text-center text-3xl font-semibold p-4'>Total Toy : {data.length}</p>
-            <div className='lg:grid grid-cols-2 gap-5 px-1 py-10'>
-            {
-                data.map(mydata => <Viewdata
-                 key={mydata._id} mydata={mydata} toy={toy} setToy={setToy} >
+        <div className="overflow-x-auto px-2">
+            <p className='text-center text-3xl font-semibold p-4'>Total Toy : {data.length}</p>
+        <table className="table table-compact w-full">
+          <thead>
+            <tr> 
+              <th className='text-center'>Toy Picture</th> 
+              <th className='text-center'>Seller Name</th> 
+              <th className='text-center'>Toy Name</th> 
+              <th className='text-center'>Sub-category</th> 
+              <th className='text-center'>Price</th> 
+              <th className='text-center'>Available Quantity</th> 
+              <th className='text-center'> </th>
+            </tr>
+          </thead> 
+          
+               {
+              data.map(mydata => <Viewdata
+              key={mydata._id} mydata={mydata} toy={toy} setToy={setToy} >
 
-                </Viewdata>)
-            }
-            </div>
+              </Viewdata>)
+               }
+          
+          
+        </table>
         </div>
     );
 };
 
 export default Mydata;
+
+
+

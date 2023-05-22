@@ -59,33 +59,23 @@ const Viewdata = ({ mydata ,setToy ,toy}) => {
 
   }
   return (
-    <div className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 p-1">
-      <div className="card card-side bg-slate-300 shadow-xl ">
-        <figure className="p-5">
-          <img
-            src={pictureURL?pictureURL : "Picture"} className="h-40 w-32 border-2 shadow-lg"
-            alt="Movie"
-          />
-        </figure>
-        <div className="w-full flex justify-between pr-4 pt-8 p-5">
-          <div>
-          <h2 className="card-title">{name}</h2>
-          <p>Seller Name: {sellerName}</p>
-          <p>Seller Email: {sellerEmail}</p>
-          <p>Sub Category: {subCategory}</p>
-          <p>Price: {price}</p>
-          <p>Rating: {rating}</p>
-          <p>Quantity: {quantity}</p>
-          <p>description: {description}</p>
+      <tbody className=" p-1">
+          <tr className='border-2 '>
+            <td><img className="h-10 ml-8" src={pictureURL} alt="" /> </td>
+            <td className='p-3 text-center'>{sellerName} </td> 
+            <td className='p-3 text-center'>{name} </td> 
+            <td className='p-3 text-center'>{subCategory} </td> 
+            <td className='p-3 text-center'>{price} </td> 
+            <td className='p-3 text-center'>{quantity} </td> 
+            <div>
+                <Link to={`/update/${_id}`} >  <button className="btn btn-active text-center space-x-1">Update</button>  </Link>
+                <button onClick={() => handelDelete(_id)} className="btn bg-red-600 text-center">Delete</button>
           </div>
-          <div className="btn-group btn-group-vertical ">
-                <Link to={`/update/${_id}`} >  <button className="btn btn-active ">Update</button>  </Link>
-                <button onClick={() => handelDelete(_id)} className="btn bg-red-600">Delete</button>
-          </div>
-        </div>
-      </div>
-    </div>
+          </tr>
+     </tbody> 
   );
 };
 
 export default Viewdata;
+
+

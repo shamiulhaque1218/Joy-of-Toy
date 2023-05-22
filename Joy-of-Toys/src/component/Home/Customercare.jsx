@@ -5,7 +5,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Customercare = () => {
     return (
-        <div className='py-24 px-6 border-dashed border-t-2 border-slate-300 grid grid-cols-5'>
+        <div className='py-24 px-6 border-dashed border-t-2 border-slate-300 grid grid-cols-5'  data-aos="fade-right"
+        data-aos-offset="300"
+        data-aos-easing="ease-in-sine">
             <div className='p-5 '>
             <FontAwesomeIcon className='h-12' icon={faTruckFast}  beatFade />
             <p className='gFont2 text-2xl font-medium'>Free Shipping</p>

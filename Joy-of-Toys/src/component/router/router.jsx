@@ -13,6 +13,7 @@ import AddData from "../AddData/AddData";
 import Mydata from "../AddData/Mydata";
 import Alltoy from "../AddData/Alltoy";
 import Updatetoy from "../AddData/Updatetoy";
+import AllToyView from "../AddData/AllToyView";
 
 const router = createBrowserRouter([
     {
@@ -43,7 +44,7 @@ const router = createBrowserRouter([
         },
         {
           path: "/blogs",
-          element: <PrivateRoute> <Blogs> </Blogs> </PrivateRoute>,
+          element: <Blogs> </Blogs> ,
         },
         {
           path: "/mydata",
@@ -53,6 +54,12 @@ const router = createBrowserRouter([
         {
           path: "/alltoys",
           element: <Alltoy />,
+          loader: () => fetch('https://joy-of-toys-server.vercel.app/product')
+        },
+        {
+          path: "/alltoyview/:id",
+          element:<PrivateRoute>  <AllToyView />  </PrivateRoute>,
+          loader: ({params}) => fetch(`https://joy-of-toys-server.vercel.app/product/${params.id}`),
         },
         {
           path: "/update/:id",

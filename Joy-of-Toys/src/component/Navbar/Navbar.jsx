@@ -16,7 +16,8 @@ const Navbar = () => {
   };
   //console.log(user?.photoURL);
   return (
-    <div>
+    <div data-aos="fade-down"
+    data-aos-duration="300" > 
       <div className="navbar bg-base-100 lg:p-5 py-2 bg-gradient-to-r from-blue-100 to-blue-200">
         <div className="navbar-center">
           <div className="dropdown">

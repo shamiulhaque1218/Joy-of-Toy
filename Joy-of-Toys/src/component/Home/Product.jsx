@@ -29,17 +29,17 @@ const Product = (props) => {
  const id_0 = (props.result.data[0]._id);
  
   return (
-    <div className="py-2 text-center">
-      <p className="text-3xl py-12 gFont2"> Product Categories </p>
+    <div className="py-2 text-center"  data-aos="flip-down" data-aos-duration="2000">
+      <p className="text-3xl py-12 pr-10 lg:pr-0 text-center gFont2"> Product Categories </p>
       <Tabs>
-        <TabList>
+        <TabList className="pr-10 lg:pr-0">
           <Tab>Teddy Bear</Tab>
           <Tab>Dinosaur Toy</Tab>
           <Tab>Horse Toy</Tab>
         </TabList>
 
         <TabPanel>
-          <div className="lg:grid grid-cols-3 px-10">
+          <div className="grid lg:grid-cols-3 grid-cols-1 lg:px-10  px-72">
             <div className="card card-compact w-96 bg-base-100 shadow-xl">
               <figure>
                 <img
@@ -149,7 +149,7 @@ const Product = (props) => {
           </div>
         </TabPanel>
         <TabPanel>
-          <div className="lg:grid grid-cols-3 px-10">
+          <div className="grid lg:grid-cols-3 grid-cols-1 lg:px-10  px-72">
             <div className="card card-compact w-96 bg-base-100 shadow-xl">
               <figure>
                 <img
@@ -257,7 +257,7 @@ const Product = (props) => {
           </div>
         </TabPanel>
         <TabPanel>
-          <div className="lg:grid grid-cols-3 px-10">
+          <div className="grid lg:grid-cols-3 grid-cols-1 lg:px-10  px-72">
             <div className="card card-compact w-96 bg-base-100 shadow-xl">
               <figure>
                 <img
