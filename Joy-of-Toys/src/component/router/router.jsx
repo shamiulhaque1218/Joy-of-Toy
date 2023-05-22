@@ -53,8 +53,7 @@ const router = createBrowserRouter([
         },
         {
           path: "/alltoys",
-          element: <Alltoy />,
-          loader: () => fetch('https://joy-of-toys-server.vercel.app/product')
+          element: <Alltoy />
         },
         {
           path: "/alltoyview/:id",

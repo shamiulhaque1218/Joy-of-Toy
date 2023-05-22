@@ -1,12 +1,47 @@
 /* eslint-disable no-unused-vars */
-import React from 'react';
-import { useLoaderData } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
 import AlldataWithtable from './AlldataWithtable';
 
 const Alltoy = () => {
-  const data = useLoaderData()
+
+  const [searchPrice, setSearchPrice] = useState("");
+  const [toy,setToy] = useState([]);
+
+   useEffect( () => {
+
+    fetch('https://joy-of-toys-server.vercel.app/product')
+    .then((res) => res.json())
+    .then(data => {
+      setToy(data)
+    })
+
+   } ,[])
+
+
+  const handelSearch = () => {
+
+    fetch(`https://joy-of-toys-server.vercel.app/products/${searchPrice}`)
+    .then((res) => res.json())
+    .then(data => {
+      setToy(data)
+    })
+
+  }
+
+ 
     return (
-      <div className="overflow-x-auto px-2">
+      <div className="p-10">
+
+      <div className="mb-4 mx-10 space-x-2">
+        <input
+          type="text"
+          id="sellerName"
+          onChange={(e) => setSearchPrice(e.target.value)}
+          className="w-40 py-2 placeholder-gray-400 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+        />
+        <button className='bg-black text-white p-2 rounded-lg' onClick={handelSearch}> Search</button>
+      </div>
+
       <table className="table table-compact w-full">
         <thead>
           <tr> 
@@ -20,7 +55,7 @@ const Alltoy = () => {
         </thead> 
         
           {
-            data.map(data => <AlldataWithtable key={data._id} data={data} >  
+            toy.map(data => <AlldataWithtable key={data._id} data={data} >  
 
             </AlldataWithtable> )
           }

@@ -11,7 +11,7 @@ const Footer = () => {
   <img className="w-24 h-24 rounded-full" src="joytoy.png" alt="" />
     <Link to="/about">About us</Link> 
     <Link to="/contact">Contact</Link> 
-    <Link to="/toys">Toys</Link> 
+    <Link to="/alltoys">All Toys</Link> 
     <Link to="/blogs">Blogs</Link>
   </div> 
   <div>

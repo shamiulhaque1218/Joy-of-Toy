@@ -1,8 +1,11 @@
 /* eslint-disable no-unused-vars */
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import Swal from 'sweetalert2';
+import { AuthContext } from '../provider/AuthProvider';
 
 const AddData = () => {
+  const {user} = useContext(AuthContext);
+  //console.log(user?.email)
 
     const [name, setName] = useState('');
     const [pictureURL, setPictureURL] = useState('');
@@ -16,8 +19,9 @@ const AddData = () => {
 
     const handleSubmit = (e) => {
     e.preventDefault(); 
-    const addToy = {name,pictureURL,sellerName,sellerEmail,subCategory,price,rating,quantity,description}
-    console.log(addToy);
+    const user_email =user?.email;
+    const addToy = {user_email,name,pictureURL,sellerName,sellerEmail,subCategory,price,rating,quantity,description}
+    //console.log(addToy);
 
     fetch('https://joy-of-toys-server.vercel.app/product', {
         method: 'POST',

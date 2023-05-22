@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 // eslint-disable-next-line no-unused-vars
 import React, { useEffect, useState } from "react";
 import Banner from "./Banner";
@@ -9,7 +10,7 @@ import Customercare from "./Customercare";
 
 const Home = () => {
   const newdata = useLoaderData(); 
-  console.log(newdata);
+  //console.log(newdata);
   
   
   const [toyData, setToyData] = useState([]);

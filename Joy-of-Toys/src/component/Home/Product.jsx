@@ -256,7 +256,7 @@ const Product = (props) => {
             </div>
           </div>
         </TabPanel>
-        <TabPanel>
+        <TabPanel >
           <div className="grid lg:grid-cols-3 grid-cols-1 lg:px-10  px-72">
             <div className="card card-compact w-96 bg-base-100 shadow-xl">
               <figure>
