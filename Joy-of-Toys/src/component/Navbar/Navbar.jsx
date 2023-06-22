@@ -17,9 +17,9 @@ const Navbar = () => {
   //console.log(user?.photoURL);
   return (
     <div data-aos="zoom-in"
-    data-aos-duration="1000" > 
-      <div className="navbar bg-base-100 lg:p-5 py-2 bg-gradient-to-r from-blue-100 to-blue-200">
-        <div className="navbar-start">
+    data-aos-duration="1000" >
+      <div className="navbar bg-base-100 py-2  bg-gradient-to-r from-blue-100 to-blue-200">
+        <div className="navbar-start ">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
               <svg
@@ -131,8 +131,8 @@ const Navbar = () => {
               
             </ul>
           </div>
-          <img className="w-24 h-24 rounded-full" src="joytoy.png" alt="" />
-          <a className="btn btn-ghost normal-case text-4xl gFont font-light">
+          <img className="w-20 h-20 rounded-full" src="joytoy.png" alt="" />
+          <a className="btn btn-ghost normal-case text-4xl gFont font-light ">
             Joy Of Toys
           </a>
         </div>
